@@ -1,0 +1,29 @@
+{
+  "smartParkingApp": {
+    "carPark": {
+      "home": {
+        "title": "Car Parks",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Skapa en ny Car Park",
+        "createOrEditLabel": "Skapa eller ändra en Car Park",
+        "search": "Sök efter Car Park",
+        "notFound": "No Car Parks found"
+      },
+      "created": "En ny Car Park är skapad med id {{ param }}",
+      "updated": "En Car Park är uppdaterad med id  {{ param }}",
+      "deleted": "En Car Park är borttagen med id  {{ param }}",
+      "delete": {
+        "question": "Är du säker på att du vill ta bort Car Park {{ id }}?"
+      },
+      "detail": {
+        "title": "Car Park"
+      },
+      "id": "ID",
+      "name": "Name",
+      "owner": "Owner",
+      "openHours": "Open Hours",
+      "parkingSpot": "Parking Spot",
+      "address": "Address"
+    }
+  }
+}

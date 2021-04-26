@@ -1,0 +1,29 @@
+{
+  "smartParkingApp": {
+    "openHours": {
+      "home": {
+        "title": "Open Hours",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Skapa en ny Open Hours",
+        "createOrEditLabel": "Skapa eller ändra en Open Hours",
+        "search": "Sök efter Open Hours",
+        "notFound": "No Open Hours found"
+      },
+      "created": "En ny Open Hours är skapad med id {{ param }}",
+      "updated": "En Open Hours är uppdaterad med id  {{ param }}",
+      "deleted": "En Open Hours är borttagen med id  {{ param }}",
+      "delete": {
+        "question": "Är du säker på att du vill ta bort Open Hours {{ id }}?"
+      },
+      "detail": {
+        "title": "Open Hours"
+      },
+      "id": "ID",
+      "weekday": "Weekday",
+      "openingHour": "Opening Hour",
+      "closingHour": "Closing Hour",
+      "date": "Date",
+      "carPark": "Car Park"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "smartParkingApp": {
+    "openHours": {
+      "home": {
+        "title": "Open Hours",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Open Hours",
+        "createOrEditLabel": "Create or edit a Open Hours",
+        "search": "Search for Open Hours",
+        "notFound": "No Open Hours found"
+      },
+      "created": "A new Open Hours is created with identifier {{ param }}",
+      "updated": "A Open Hours is updated with identifier {{ param }}",
+      "deleted": "A Open Hours is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Open Hours {{ id }}?"
+      },
+      "detail": {
+        "title": "Open Hours"
+      },
+      "id": "ID",
+      "weekday": "Weekday",
+      "openingHour": "Opening Hour",
+      "closingHour": "Closing Hour",
+      "date": "Date",
+      "carPark": "Car Park"
+    }
+  }
+}

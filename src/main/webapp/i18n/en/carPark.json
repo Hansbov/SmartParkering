@@ -1,0 +1,29 @@
+{
+  "smartParkingApp": {
+    "carPark": {
+      "home": {
+        "title": "Car Parks",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Car Park",
+        "createOrEditLabel": "Create or edit a Car Park",
+        "search": "Search for Car Park",
+        "notFound": "No Car Parks found"
+      },
+      "created": "A new Car Park is created with identifier {{ param }}",
+      "updated": "A Car Park is updated with identifier {{ param }}",
+      "deleted": "A Car Park is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Car Park {{ id }}?"
+      },
+      "detail": {
+        "title": "Car Park"
+      },
+      "id": "ID",
+      "name": "Name",
+      "owner": "Owner",
+      "openHours": "Open Hours",
+      "parkingSpot": "Parking Spot",
+      "address": "Address"
+    }
+  }
+}

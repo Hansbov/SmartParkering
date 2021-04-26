@@ -1,0 +1,39 @@
+{
+  "name": "OpenHours",
+  "fields": [
+    {
+      "fieldName": "weekday",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "openingHour",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "closingHour",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "carPark",
+      "otherEntityRelationshipName": "openHours",
+      "relationshipName": "carPark"
+    }
+  ],
+  "entityTableName": "open_hours",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210421163956"
+}

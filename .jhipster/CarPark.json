@@ -1,0 +1,43 @@
+{
+  "name": "CarPark",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "owner",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "openHours",
+      "otherEntityRelationshipName": "carPark",
+      "relationshipName": "openHours"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "parkingSpot",
+      "otherEntityRelationshipName": "carPark",
+      "relationshipName": "parkingSpot"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "address",
+      "otherEntityRelationshipName": "carPark",
+      "relationshipName": "address"
+    }
+  ],
+  "entityTableName": "car_park",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210421163953"
+}

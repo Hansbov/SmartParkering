@@ -1,0 +1,28 @@
+{
+  "smartParkingApp": {
+    "parkingSpot": {
+      "home": {
+        "title": "Parking Spots",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Skapa en ny Parking Spot",
+        "createOrEditLabel": "Skapa eller ändra en Parking Spot",
+        "search": "Sök efter Parking Spot",
+        "notFound": "No Parking Spots found"
+      },
+      "created": "En ny Parking Spot är skapad med id {{ param }}",
+      "updated": "En Parking Spot är uppdaterad med id  {{ param }}",
+      "deleted": "En Parking Spot är borttagen med id  {{ param }}",
+      "delete": {
+        "question": "Är du säker på att du vill ta bort Parking Spot {{ id }}?"
+      },
+      "detail": {
+        "title": "Parking Spot"
+      },
+      "id": "ID",
+      "accessableParking": "Accessable Parking",
+      "available": "Available",
+      "floor": "Floor",
+      "carPark": "Car Park"
+    }
+  }
+}

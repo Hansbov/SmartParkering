@@ -1,0 +1,28 @@
+{
+  "smartParkingApp": {
+    "parkingSpot": {
+      "home": {
+        "title": "Parking Spots",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Parking Spot",
+        "createOrEditLabel": "Create or edit a Parking Spot",
+        "search": "Search for Parking Spot",
+        "notFound": "No Parking Spots found"
+      },
+      "created": "A new Parking Spot is created with identifier {{ param }}",
+      "updated": "A Parking Spot is updated with identifier {{ param }}",
+      "deleted": "A Parking Spot is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Parking Spot {{ id }}?"
+      },
+      "detail": {
+        "title": "Parking Spot"
+      },
+      "id": "ID",
+      "accessableParking": "Accessable Parking",
+      "available": "Available",
+      "floor": "Floor",
+      "carPark": "Car Park"
+    }
+  }
+}

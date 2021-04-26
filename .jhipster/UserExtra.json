@@ -1,0 +1,39 @@
+{
+  "name": "UserExtra",
+  "fields": [
+    {
+      "fieldName": "currentParkingSpot",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "timeOfParking",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "parkingSpot",
+      "otherEntityRelationshipName": "userExtra",
+      "relationshipName": "parkingSpot",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "userExtra",
+      "relationshipName": "user",
+      "ownerSide": true
+    }
+  ],
+  "entityTableName": "user_extra",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210421163957"
+}

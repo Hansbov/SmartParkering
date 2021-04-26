@@ -1,0 +1,28 @@
+{
+  "smartParkingApp": {
+    "userExtra": {
+      "home": {
+        "title": "User Extras",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Skapa en ny User Extra",
+        "createOrEditLabel": "Skapa eller ändra en User Extra",
+        "search": "Sök efter User Extra",
+        "notFound": "No User Extras found"
+      },
+      "created": "En ny User Extra är skapad med id {{ param }}",
+      "updated": "En User Extra är uppdaterad med id  {{ param }}",
+      "deleted": "En User Extra är borttagen med id  {{ param }}",
+      "delete": {
+        "question": "Är du säker på att du vill ta bort User Extra {{ id }}?"
+      },
+      "detail": {
+        "title": "User Extra"
+      },
+      "id": "ID",
+      "currentParkingSpot": "Current Parking Spot",
+      "timeOfParking": "Time Of Parking",
+      "parkingSpot": "Parking Spot",
+      "user": "User"
+    }
+  }
+}

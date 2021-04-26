@@ -1,0 +1,28 @@
+{
+  "smartParkingApp": {
+    "address": {
+      "home": {
+        "title": "Addresses",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Skapa en ny Address",
+        "createOrEditLabel": "Skapa eller ändra en Address",
+        "search": "Sök efter Address",
+        "notFound": "No Addresses found"
+      },
+      "created": "En ny Address är skapad med id {{ param }}",
+      "updated": "En Address är uppdaterad med id  {{ param }}",
+      "deleted": "En Address är borttagen med id  {{ param }}",
+      "delete": {
+        "question": "Är du säker på att du vill ta bort Address {{ id }}?"
+      },
+      "detail": {
+        "title": "Address"
+      },
+      "id": "ID",
+      "streetAddress": "Street Address",
+      "postalCode": "Postal Code",
+      "city": "City",
+      "carPark": "Car Park"
+    }
+  }
+}

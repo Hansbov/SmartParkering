@@ -1,0 +1,36 @@
+{
+  "name": "ParkingSpot",
+  "fields": [
+    {
+      "fieldName": "accessableParking",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "available",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "floor",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "carPark",
+      "otherEntityRelationshipName": "parkingSpot",
+      "relationshipName": "carPark"
+    }
+  ],
+  "entityTableName": "parking_spot",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210421163955"
+}
