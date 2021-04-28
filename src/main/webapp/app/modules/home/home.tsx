@@ -1,10 +1,12 @@
 import './home.scss';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Translate } from 'react-jhipster';
 import { connect } from 'react-redux';
-import { Row, Col, Alert } from 'reactstrap';
+import { Container, Row, Col, Alert } from 'reactstrap';
+import { IParkingSpot } from 'app/shared/model/parking-spot.model';
+import { IRootState } from 'app/shared/reducers';
 
 export type IHomeProp = StateProps;
 
@@ -18,18 +20,28 @@ export const Home = (props: IHomeProp) => {
       </Col>
       <Col md="9">
         <h2>
-          <Translate contentKey="home.title">Welcome, Java Hipster!</Translate>
+          <Translate contentKey="home.title">Welcome SmartParking!</Translate>
         </h2>
         <p className="lead">
           <Translate contentKey="home.subtitle">This is your homepage</Translate>
         </p>
         {account && account.login ? (
           <div>
-            <Alert color="success">
-              <Translate contentKey="home.logged.message" interpolate={{ username: account.login }}>
-                You are logged in as user {account.login}.
-              </Translate>
-            </Alert>
+          <Container>
+          <Row>
+              <Col md ="3" className = "red-hspot"/>
+              <Col md ="1" className = "blank"/>
+              <Col md ="3" className = "green-hspot"/>
+          </Row>
+          <Row className ="blank"/>
+          </Container>
+        
+
+
+
+
+
+
           </div>
         ) : (
           <div>

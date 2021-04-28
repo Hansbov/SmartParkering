@@ -8,3 +8,34 @@ Main page styles
   background: url('../../../content/images/jhipster_family_member_1.svg') no-repeat center top;
   background-size: contain;
 }
+
+.red-hspot {
+  display: inline-block;
+  width: 90px;
+  height: 100px;
+  background: red;
+}
+
+.green-hspot {
+  display: inline-block;
+  width: 90px;
+  height: 100px;
+  background: green;
+}
+.red-vspot{
+  display: inline-block;
+  width: 40px;
+  height: 80px;
+  background: red;
+}
+.green-vspot{
+  display: inline-block;
+  width: 35px;
+  height: 70px;
+  background: green;
+}
+.blank {
+width:90px;
+height: 20px;
+background: white;
+}
