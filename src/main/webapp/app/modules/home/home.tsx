@@ -1,120 +1,81 @@
 import './home.scss';
 
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, RouteComponentProps } from 'react-router-dom';
 import { Translate } from 'react-jhipster';
 import { connect } from 'react-redux';
 import { Container, Row, Col, Alert } from 'reactstrap';
 import { IParkingSpot } from 'app/shared/model/parking-spot.model';
 import { IRootState } from 'app/shared/reducers';
+import { getSearchEntities, getEntities } from 'app/entities/parking-spot/parking-spot.reducer';
 
-export type IHomeProp = StateProps;
+export interface IHomeProp extends StateProps, DispatchProps, RouteComponentProps<{ url: string }> {}
+//export type IHomeProp = StateProps;
 
 export const Home = (props: IHomeProp) => {
-  const { account } = props;
+  const { parkingSpotList, loading} = props;
+
+  const [search, setSearch] = useState('');
+
+  useEffect(() => {
+    props.getEntities();
+  }, []);
+
+  const startSearching = () => {
+    if (search) {
+      props.getSearchEntities(search);
+    }
+  };
+
+  const clear = () => {
+    setSearch('');
+    props.getEntities();
+  };
+
+  const handleSearch = event => setSearch(event.target.value);
+
+  const handleSyncList = () => {
+    props.getEntities();
+  };
 
   return (
     <Row>
-      <Col md="3" className="pad">
-        <span className="hipster rounded" />
-      </Col>
       <Col md="9">
         <h2>
           <Translate contentKey="home.title">Welcome SmartParking!</Translate>
         </h2>
-        <p className="lead">
-          <Translate contentKey="home.subtitle">This is your homepage</Translate>
-        </p>
-        {account && account.login ? (
-          <div>
+
+        <div>
           <Container>
-          <Row>
-              <Col md ="3" className = "red-hspot"/>
-              <Col md ="1" className = "blank"/>
-              <Col md ="3" className = "green-hspot"/>
-          </Row>
-          <Row className ="blank"/>
+              <Row>
+              {parkingSpotList && parkingSpotList.length > 0 ? (
+              parkingSpotList.map((parkingSpot, i) => (
+                parkingSpot.available ? <div className = "green-hspot"/> : <div className = "red-hspot"/>
+              ))) : (
+                !loading && (
+                  <div className="alert alert-warning">
+                    <Translate contentKey="smartParkingApp.parkingSpot.home.notFound">No Parking Spots found</Translate>
+                  </div>
+                ))}
+              </Row>
+            <Row className ="blank"/>
           </Container>
-        
-
-
-
-
-
-
-          </div>
-        ) : (
-          <div>
-            <Alert color="warning">
-              <Translate contentKey="global.messages.info.authenticated.prefix">If you want to </Translate>
-
-              <Link to="/login" className="alert-link">
-                <Translate contentKey="global.messages.info.authenticated.link"> sign in</Translate>
-              </Link>
-              <Translate contentKey="global.messages.info.authenticated.suffix">
-                , you can try the default accounts:
-                <br />- Administrator (login=&quot;admin&quot; and password=&quot;admin&quot;)
-                <br />- User (login=&quot;user&quot; and password=&quot;user&quot;).
-              </Translate>
-            </Alert>
-
-            <Alert color="warning">
-              <Translate contentKey="global.messages.info.register.noaccount">You do not have an account yet?</Translate>&nbsp;
-              <Link to="/account/register" className="alert-link">
-                <Translate contentKey="global.messages.info.register.link">Register a new account</Translate>
-              </Link>
-            </Alert>
-          </div>
-        )}
-        <p>
-          <Translate contentKey="home.question">If you have any question on JHipster:</Translate>
-        </p>
-
-        <ul>
-          <li>
-            <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer">
-              <Translate contentKey="home.link.homepage">JHipster homepage</Translate>
-            </a>
-          </li>
-          <li>
-            <a href="http://stackoverflow.com/tags/jhipster/info" target="_blank" rel="noopener noreferrer">
-              <Translate contentKey="home.link.stackoverflow">JHipster on Stack Overflow</Translate>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/jhipster/generator-jhipster/issues?state=open" target="_blank" rel="noopener noreferrer">
-              <Translate contentKey="home.link.bugtracker">JHipster bug tracker</Translate>
-            </a>
-          </li>
-          <li>
-            <a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer">
-              <Translate contentKey="home.link.chat">JHipster public chat room</Translate>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/jhipster" target="_blank" rel="noopener noreferrer">
-              <Translate contentKey="home.link.follow">follow @jhipster on Twitter</Translate>
-            </a>
-          </li>
-        </ul>
-
-        <p>
-          <Translate contentKey="home.like">If you like JHipster, do not forget to give us a star on</Translate>{' '}
-          <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer">
-            GitHub
-          </a>
-          !
-        </p>
+        </div>
       </Col>
     </Row>
   );
 };
 
-const mapStateToProps = storeState => ({
-  account: storeState.authentication.account,
-  isAuthenticated: storeState.authentication.isAuthenticated,
+const mapStateToProps = ({ parkingSpot }: IRootState, storeState) => ({
+  parkingSpotList: parkingSpot.entities,
+  loading: parkingSpot.loading,
 });
 
+const mapDispatchToProps = {
+  getSearchEntities,
+  getEntities,
+};
+type DispatchProps = typeof mapDispatchToProps;
 type StateProps = ReturnType<typeof mapStateToProps>;
 
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

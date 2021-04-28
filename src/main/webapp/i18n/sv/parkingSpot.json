@@ -7,7 +7,7 @@
         "createLabel": "Skapa en ny Parking Spot",
         "createOrEditLabel": "Skapa eller ändra en Parking Spot",
         "search": "Sök efter Parking Spot",
-        "notFound": "No Parking Spots found"
+        "notFound": "Ingen parkeringsplats hittad"
       },
       "created": "En ny Parking Spot är skapad med id {{ param }}",
       "updated": "En Parking Spot är uppdaterad med id  {{ param }}",
