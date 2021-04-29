@@ -6,7 +6,7 @@
       "home": "Hem",
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
-        "main": "Entiter",
+        "main": "Entiteter",
         "carPark": "Car Park",
         "address": "Address",
         "parkingSpot": "Parking Spot",
