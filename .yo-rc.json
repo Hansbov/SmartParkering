@@ -43,6 +43,9 @@
     "clientThemeVariant": "",
     "languages": ["en", "sv"],
     "entities": ["CarPark", "Address", "ParkingSpot", "OpenHours", "UserExtra"],
-    "lastLiquibaseTimestamp": 1619023197000
+    "lastLiquibaseTimestamp": 1619023197000,
+    "herokuAppName": "smartparkering",
+    "herokuDeployType": "git",
+    "herokuJavaVersion": "11"
   }
 }
