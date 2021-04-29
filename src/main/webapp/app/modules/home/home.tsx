@@ -13,7 +13,7 @@ export interface IHomeProp extends StateProps, DispatchProps, RouteComponentProp
 //export type IHomeProp = StateProps;
 
 export const Home = (props: IHomeProp) => {
-  const { parkingSpotList, loading} = props;
+  const { parkingSpotList, loading, account } = props;
 
   const [search, setSearch] = useState('');
 
@@ -32,21 +32,22 @@ export const Home = (props: IHomeProp) => {
     props.getEntities();
   };
 
-  const handleSearch = event => setSearch(event.target.value);
+  const handleSearch = (event: { target: { value: React.SetStateAction<string>; }; }) => setSearch(event.target.value);
 
   const handleSyncList = () => {
     props.getEntities();
   };
 
+
   return (
     <Row>
-      <Col md="9">
+      <Col md="9" className="parkingLot">
         <h2>
           <Translate contentKey="home.title">Welcome SmartParking!</Translate>
         </h2>
 
-        <div>
-          <Container>
+      {account && account.login ? (
+        <div className="parkingLot">
               <Row>
               {parkingSpotList && parkingSpotList.length > 0 ? (
               parkingSpotList.map((parkingSpot, i) => (
@@ -58,17 +59,32 @@ export const Home = (props: IHomeProp) => {
                   </div>
                 ))}
               </Row>
-            <Row className ="blank"/>
-          </Container>
-        </div>
-      </Col>
+            </div>
+        ) : (
+          <div className="parkingLot">
+              <Row>
+              {parkingSpotList && parkingSpotList.length > 0 ? (
+              parkingSpotList.map((parkingSpot, i) => (
+                parkingSpot.available ? <div className = "green-hspot"/> : <div className = "red-hspot"/>
+              ))) : (
+                !loading && (
+                  <div className="alert alert-warning">
+                    <Translate contentKey="smartParkingApp.parkingSpot.home.notFound">No Parking Spots found</Translate>
+                  </div>
+                ))}
+              </Row>
+            </div>
+        )}
+        </Col>
     </Row>
   );
 };
 
-const mapStateToProps = ({ parkingSpot }: IRootState, storeState) => ({
-  parkingSpotList: parkingSpot.entities,
-  loading: parkingSpot.loading,
+const mapStateToProps = (storeState: IRootState) => ({
+  account: storeState.authentication.account,
+  isAuthenticated: storeState.authentication.isAuthenticated,
+  parkingSpotList: storeState.parkingSpot.entities,
+  loading: storeState.parkingSpot.loading,
 });
 
 const mapDispatchToProps = {
