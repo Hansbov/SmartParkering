@@ -19,6 +19,7 @@ export interface IHeaderProps {
   onLocaleChange: (langKey: string) => void;
 }
 
+
 const Header = (props: IHeaderProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -37,6 +38,13 @@ const Header = (props: IHeaderProps) => {
       </div>
     ) : null;
 
+  const hideLoadingBar = () =>{
+    if (window.location.href === "/") {
+      document.getElementById('loading-bar').hidden = true;
+    }
+  }
+
+
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   /* jhipster-needle-add-element-to-menu - JHipster will add new menu items here */
@@ -44,7 +52,7 @@ const Header = (props: IHeaderProps) => {
   return (
     <div id="app-header">
       {renderDevRibbon()}
-      <LoadingBar className="loading-bar" />
+
       <Navbar data-cy="navbar" dark expand="sm" fixed="top" className="jh-navbar">
         <NavbarToggler aria-label="Menu" onClick={toggleMenu} />
         <Brand />
@@ -63,5 +71,6 @@ const Header = (props: IHeaderProps) => {
     </div>
   );
 };
+
 
 export default Header;
