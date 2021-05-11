@@ -169,7 +169,7 @@ public class UserService {
         newUserExtra.setUser(newUser);
         newUserExtra.setParkingSpot(null);
         newUserExtra.setTimeOfParking(null);
-        newUserExtra.setCurrentParkingSpot("one");
+        newUserExtra.setCurrentParkingSpot(null);
         userExtraRepository.save(newUserExtra);
         userExtraSearchRepository.save(newUserExtra);
         log.debug("Created Information for UserExtra: {}", newUserExtra);
@@ -226,7 +226,7 @@ public class UserService {
         newUserExtra.setUser(user);
         newUserExtra.setParkingSpot(null);
         newUserExtra.setTimeOfParking(null);
-        newUserExtra.setCurrentParkingSpot("one");
+        newUserExtra.setCurrentParkingSpot(null);
         userExtraRepository.save(newUserExtra);
         userExtraSearchRepository.save(newUserExtra);
         log.debug("Created Information for UserExtra: {}", newUserExtra);
