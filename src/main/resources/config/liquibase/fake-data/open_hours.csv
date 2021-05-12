@@ -1,11 +1,4 @@
-id;weekday;opening_hour;closing_hour;date
-1;orchid lime;HDD generating;Tasty IB invoice;2021-04-21
-2;scale withdrawal;Ergonomic Virginia Ameliorated;success black;2021-04-20
-3;motivating Towels grid-enabled;Berkshire attitude;e-business;2021-04-21
-4;Avon Berkshire;cross-platform Granite;Reverse-engineered Tactics Principal;2021-04-21
-5;silver;Bangladesh Branding;Central Brook;2021-04-21
-6;withdrawal generate;Account Ramp;vertical Practical;2021-04-20
-7;strategize;Platinum leading-edge Savings;Sausages Incredible 1080p;2021-04-20
-8;JBOD South;Buckinghamshire;Tactics Light;2021-04-21
-9;Jewelery;Regional;Mozambique;2021-04-20
-10;Incredible;Intelligent Concrete payment;withdrawal drive Buckinghamshire;2021-04-20
+id;weekday;opening_hour;closing_hour;car_park_id
+1;Monday-Friday;07:00;22:00;1
+2;Saturday-Sunday;00:00;23:59;1
+
