@@ -5,7 +5,6 @@ import { Button, InputGroup, Col, Row, Table } from 'reactstrap';
 import { AvForm, AvGroup, AvInput } from 'availity-reactstrap-validation';
 import { Translate, translate, ICrudSearchAction } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { IRootState } from 'app/shared/reducers';
 import { getSearchEntities, getEntities } from './parking-spot.reducer';
 import { IParkingSpot } from 'app/shared/model/parking-spot.model';
