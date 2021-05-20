@@ -45,7 +45,9 @@
       "confirmpassword.label": "Konfirmera nytt lösenord",
       "confirmpassword.placeholder": "Konfirmera det nya lösenordet",
       "email.label": "E-post",
-      "email.placeholder": "Din e-post"
+      "email.placeholder": "Din e-post",
+      "currentpassword.label": "Nuvarande lösenord",
+      "currentpassword.placeholder": "Nuvarande lösenord"
     },
     "messages": {
       "info": {
