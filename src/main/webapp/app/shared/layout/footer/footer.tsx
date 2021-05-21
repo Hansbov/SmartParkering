@@ -9,7 +9,7 @@ const Footer = props => (
     <Row>
       <Col md="12">
         <p>
-          <Translate contentKey="footer">Your footer</Translate>
+          Smart Parking
         </p>
       </Col>
     </Row>
